@@ -42,4 +42,7 @@ ENV CPU_CORES="2"
 ENV DISK_SIZE="64G"
 ENV VERSION="win11"
 
+# running as root
+USER root
+
 ENTRYPOINT ["/usr/bin/tini", "-s", "/run/entry.sh"]
